@@ -12,10 +12,16 @@
   "activationEvents": [],
   "main": "./extension.js",
   "contributes": {
-    "commands": [{
-      "command": "dev-extention.helloWorld",
-      "title": "Hello World"
-    }]
+    "commands": [
+      {
+        "command": "dev-extention.helloWorld",
+        "title": "Hello World"
+      },
+       {
+                "command": "extension.showReactPanel",
+                "title": "Show React Panel"
+        }
+    ]
   },
   "scripts": {
     "lint": "eslint .",
@@ -23,11 +29,22 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.95.0",
     "@types/mocha": "^10.0.9",
     "@types/node": "20.x",
-    "eslint": "^9.13.0",
+    "@types/vscode": "^1.95.0",
     "@vscode/test-cli": "^0.0.10",
-    "@vscode/test-electron": "^2.4.1"
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.13.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.26.3",
+    "babel-loader": "^9.2.1",
+    "html-webpack-plugin": "^5.6.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "webpack": "^5.97.0",
+    "webpack-cli": "^5.1.4"
   }
 }
